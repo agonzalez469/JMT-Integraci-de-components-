@@ -38,32 +38,144 @@
 	}
 	/*condicions else-if: si el preu és més petit de 5 mostrarà la primera alerta, si es més petit de 10 mostrará la segona alerta, si no es compleix cap d'aquestes dues condicions mostarà la última alerta.*/
 	if (edat <30) {
-		alert ("La teva edat està per sota de 30")
+		alert ("La teva edat està per sota de 30");
 	}
 	else if (edat <40) {
-		alert ("La teva edat està per sota de 40")
+		alert ("La teva edat està per sota de 40");
 	}
 	else if (edat <50) {
-		alert ("La teva edat està per sota de 50")
+		alert ("La teva edat està per sota de 50");
 	}
 	else if (edat >50) {
-		alert ("La teva edat és més de 50")
+		alert ("La teva edat és més de 50");
 	}
 	/*Exemple d'activitat amb més d'una condició.*/
 	if (edat <20) {
-		alert ("He nascut al segle XXI")
+		alert ("He nascut al segle XXI");
 	}
-	else if (edat >20 && edat <29) {
-		alert ("He nascut als 90")
+	else if (edat >=20 && edat <=29) {
+		alert ("He nascut als 90");
 	}
-	else if (edat >30 && edat <39) {
-		alert ("He nascut als 80")
+	else if (edat >=30 && edat <=39) {
+		alert ("He nascut als 80");
 	}
 	else {
-		alert ("He nascut als 70 o abans")
+		alert ("He nascut als 70 o abans");
 	}
 	/*Exemple amb varies condicions i cada condició amb més d'un valor: && (andersen) = i / || (or) = o.En el cas de que tinguessim a la mateixa condició && i || té preferència &&.*/
+	var dia = 3;
+	switch (dia) {
+	case 1: 
+		alert('Dilluns');
+	break;/*"break" s'utilitza per dir-li que pari, és a dir, en el moment que es dona la condició certa que pari d'analitzar les següents, perquè pot donar-se el cas que una variable compleixi varies condicions, però només volem que ens mostri una d'elles*/
+	case 2: 
+		alert('Dimarts');
+	break;
+	case 3: 
+		alert('Dimecres');
+	break;
+	case 4: 
+		alert('Dijous');
+	break;
+	case 5: 
+		alert('Divendres');
+	break;
+	case 6: 
+		alert('Dissabte');
+	break;
+	case 7: 
+		alert('Diumenge');
+	break;
+	default: /*"default" seria com un altrament, significant que si no es donen cap de les condicions anteriors, executi aquesta acció default.*/
+		alert('no es un dia de la setmana');
+	}
+	var dia = 4
+	switch (dia) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			alert('Avui toca treballar');
+		break;
+		case 6:
+		case 7:
+			alert('Avui festa!!!');
+		break;
+	}
+	/*Exercici 7 moodle*/
+	var planta = 5
+	switch (planta) {
+		case 4:
+			alert ("El preu és de 80 euros");
+		break;
+		case 5:
+			alert ("El preu és de 100 euros");
+		break;
+		default:
+			alert ("El preu és de 60 euros");
+		break;
+	}
+	/*Exercici 9*/
+	var numeroSorteig = 178
+	switch (numeroSorteig) {
+		case 178:
+			alert ("Guanyador del primer premi");
+		break;
+		case 241:
+			alert ("Guanyador del segon premi");
+		break;
+		case 25:
+			alert ("Guanyador del tercer premi");
+		break;
+		default:
+			alert ("No has guanyat res");
+		break;
+	}
+	var capacitat = 55;
+	var litresActuals = 15;
+	while (capacitat>litresActuals){/*"while" és un bucle, per tan, serveix per indicar que l'acció es repeteix mentre la condició sigui certa. En aquest cas estem diguent que la capacitat de gasolina del cotxe és de 55 litres i mentre en tinguem menys de 55 que s'empleni de litre en litre. Per tant, pararà de fer l'acció quan la gasolina que tenim al cotxe arribi a 55 litres, serà llavors quan es mostri l'alert*/
+		litresActuals=litresActuals+1;
+	}
+		alert("El dipòsit te "+litresActuals+" litres");/*En el cas de "while" l'"alert" va fora de la clau {} perquè sino mostraria l'alerta cada vegada que fes l'acció, i el que volem és que mostri l'alerta al final de totes les accions, quan la condició sigui falsa.*/
 
+	/*Exercici 10*//*Aquest exemple serveix per sapiguer quants minuts podem parlar amb 5 euros de saldo: la condició és mentre el saldo sigui superior o igual a 0.08 (que és el preu d'un minut de trucada), es restará aquesta cantitat al saldo i es sumaràn minuts consumits.*/
+	var saldo = 5;
+	var minuts = 0;
+	while (saldo>=0.08) {
+		saldo = saldo - 0.08;
+		minuts = minuts + 1;
+	}
+		alert ("Amb 5 euros podràs parlar "+minuts+" minuts");
+
+	/*Exercici 11*//*Volem saber quantes vegades (repeticions) s'haurà de calcular la línia de codi (Math.floor (Math.random()*100), fins que surti el numeroSort que hem escollit. Per tant, donem un valor al numeroSort, les repeticions no les sabem per tant, son 0 i la variable trobat és falsa perquè fins que no sigui certa no pararà de calcular. En el moment que trobat sigui = a cert, pararà el bucle perquè haurà trobat el numeroSort*/
+	var numeroSort = 4;
+	var trobat = false;
+	var repeticions = 0; 
+	while (trobat == false) {/* el doble igual (==) serveix per comparar els dos valors*/
+		if (Math.floor (Math.random()*100) == numeroSort) {
+			trobat = true;
+		}
+		else {
+			repeticions++;/*(++) seria el matieix que (+1), podriem dir que repeticion++ = repeticions = repeticions + 1*/
+		}
+	}
+	alert (repeticions);/*alert mostrà les repeticions que ha necesitat per trobar el número 4, que és del que tracta l'exercici*/
+	 
+	 /*Mateixa activitat però amb "do...while"*/
+	 var numeroSort = 10;
+	 var trobat = false; 
+	 var repeticions = 0;
+	 do {/*amb el "do" obliguem que es fagi aquesta acció: que busqui un número i si no coincideix amb el numeroSort que sumi una repetició. Igualment si la trobat ho ha de fet la primera vegada obligatòriament.*/
+		 if (Math.floor (Math.random()*100) == numeroSort) {
+		  trobat = true;
+		 }
+		  else {
+			  repeticions++;
+		  }
+	 }
+	 while (trobat == false);
+	 	alert (repeticions);
 </script>
 <body>
 	<h2>El meu primer JavaScript</h2>
