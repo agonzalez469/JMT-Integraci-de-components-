@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript en HTML</title>
+</head>
+<script>
+    /*Bucle FOR (PER)*/
+    var text = "Els números són: ";
+    for (i = 0; i < 5; i++) {
+        text += " " + i; /* "+=", tot junt és equivalent a text = text. */
+    }
+    alert (text);
+    /*El que volem és que ens ordeni els número del 0 al 4 amb un alert que introdueixi el text "Els número són: "
+    Per tant, li diguem que per i = 0; i < 5; i++ (sumi un número cada vegada que es compleixi la condició de que el número sigui més petit que 5.*/
+
+    /*Exercici 12: 10 alerts que vagin de l'1 al 10*/
+    var text = "Número ";
+    for (i = 1; i <= 10; i++) {
+        alert (text + i);
+        }
+    /*El que li diguem és que per i=1 (valor incial), que compleixi la condició de que sigui més petit o igual a 10, sumi 1.
+    I mostri un alert amb el valor de i cada vegada que suma.*/
+    
+    /*Exercici 13: 10 alert que vagin del 10 a l'1 */
+    var text = "número ";
+    for (i=10; i >=1; i--) {
+        alert (text + i)
+    }
+    /*Diguem que per valor incial 10, mentre sigui més gran o igual a 1, vagi restant 1 cada vegada.
+    I que mostri un alert amb el text i el valor de i cada vegada que resta.*/
+
+    /*Exercici 14: 10 alerts de l'1 al 10 i que indiqui si és parell o senar.*/
+    
+    for (i=1; i <=10; i++) {
+        if (i % 2 == 0) {
+            alert ("El número " + i + " "+"és parell");
+        }
+        else {
+            alert ("El número " + i + " "+"és senar");
+        }
+    }
+    /*Indiquem que el valor incial és 1 i que mente el valor sigui més petit o igual a 10 es sumi 1.
+    Si aquest valor és de residu 0 mostrarà un alert indicant que és parell, altrament si no té residu 0, mostrarà un alert que indiqui que és senar.*/
+
+    /*Exercici 15: bucle For amb un Switch, que tregui un alert amb el dia de la semana.*/
+
+    
+    for (i = 1; i <=7; i++) {
+        switch (i) {
+            case 1:
+            alert ("Dilluns");
+            break;
+            case 2:
+            alert ("Dimarts");
+            break;
+            case 3:
+            alert ("Dimecres");
+            break;
+            case 4:
+            alert ("Dijous");
+            break;
+            case 5:
+            alert ("Divendres");
+            break;
+            case 6:
+            alert ("Dissabte");
+            break;
+            case 7: 
+            alert ("Diumenge");
+            break;
+        }
+    }
+    /*Aconseguim que es mostri un alert amb cada dia de la setmana, indicant-li que el valor inicial és 1, que 1 = dillus, i mentre sigui igual o més petit que 7 indiqui el dia que li correspon.*/
+</script>
+<body>
+    <h1>JavaScript</h1>
+</body>
+</html>
