@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Funcions</title>
+</head>
+<script>
+    /*Exemple de funció: en aquest cas creem dos alerts que mostraràn el text hola mon.*/
+    function holaMon () {
+        alert ("hola mon");
+    }
+    holaMon ();
+    holaMon ();
+
+    function calculaPreuTotal (preu1, preu2) {
+        var preuTotal = preu1 + preu2;
+        return preuTotal;
+    } /*Fins aquí, veiem el que és la funció. Li diem el que volem que fagi (calcular); li diem que volem que calculi i que ens retorni el resultat.*/ 
+    preu1 = 5.55;
+    preu2 = 3.35;
+    preuTotal = calculaPreuTotal (preu1, preu2);
+    alert (preuTotal);
+    /*Aquí tenim la informació que necesita per executar la funció.
+    En el cas de les funcions, no es obligatori que les variables tinguin el mateix nom de manera que si ho fem com a contiuació també funcionarà.*/
+
+    function calcula (preu1, preu2) {
+        var total = preu1 + preu2;
+        return total;
+    }
+    preuA = 5.55;
+    preuB = 3.35;
+    total = calcula(preuA, preuB);
+    alert (total);
+
+</script>
+<body>
+    
+</body>
+</html>
